@@ -8,7 +8,10 @@ import ru.khokhlov.repository.TransactionRepository;
 import ru.khokhlov.repository.UserRepository;
 import ru.khokhlov.service.TransactionService;
 
+import java.sql.Timestamp;
 import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -32,15 +35,28 @@ public class TransactionServiceImpl implements TransactionService {
     @Override
     public String getCountTransaction(Map<String, String> allValues) {
         String key = allValues.get("secret_key");
-        String dateFrom = allValues.get("date-from");
-        String dateTo = allValues.get("date-to");
+        String from = allValues.get("date-from");
+        String to = allValues.get("date-to");
 
-        String answer;
+        String answer = null;
 
         if(userRepository.isItAdmin(key).equals("admin")) {
-            int count = transactionRepository.countTransactionByDate(dateFrom, dateTo);
+            try {
+                DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
 
-            answer = Integer.toString(count);
+                Date begin = formatter.parse(from);
+                Date end = formatter.parse(to);
+
+                Timestamp dateBegin = new Timestamp(begin.getTime());
+                Timestamp dateEnd = new Timestamp(end.getTime());
+
+                int count = transactionRepository.countTransactionByDate(dateBegin, dateEnd);
+
+                answer = "transaction_count:" + count;
+            }
+            catch (ParseException e) {
+                System.out.println("Exception :" + e);
+            }
         }
         else
             answer = "Wrong Data!";

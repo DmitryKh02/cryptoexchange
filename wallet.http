@@ -11,4 +11,4 @@ POST http://localhost:8080/exchange/wallet/add?secret_key=YHs`g:vJZX0mQonw]4dBt[
 POST http://localhost:8080/exchange/wallet/withdrawal-of-funds?secret_key=YHs`g:vJZX0mQonw]4dBt[Zlr&currency=TON&count=7832&credit_card=1234 5678 9012 3456
 
 ###Обмен валют
-POST http://localhost:8080/exchange/wallet/transaction?secret_key=YHs`g:vJZX0mQonw]4dBt[Zlr&currency_from=BTC&currency_to=TON&amount=10
+POST http://localhost:8080/exchange/wallet/transaction?secret_key=YHs`g:vJZX0mQonw]4dBt[Zlr&currency_from=BTC&currency_to=TON&amount=12
