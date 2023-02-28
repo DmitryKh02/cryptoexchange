@@ -1,0 +1,29 @@
+### Добавление нового пользователя
+POST http://localhost:8080/exchange/user
+Content-Type: application/json
+
+{
+  "username": "Dmitrii",
+  "email": "example@yandex.ru"
+}
+
+###  Добавление нового пользователя
+POST http://localhost:8080/exchange/user
+Content-Type: application/json
+
+{
+"username": "Daria",
+"email": "example1@yandex.ru"
+}
+
+###  Добавление нового пользователя
+POST http://localhost:8080/exchange/user
+Content-Type: application/json
+
+{
+"username": "Oksana",
+"email": "oksana@yandex.ru"
+}
+
+### Вывод всех пользователей
+GET http://localhost:8080/exchange/user/all
