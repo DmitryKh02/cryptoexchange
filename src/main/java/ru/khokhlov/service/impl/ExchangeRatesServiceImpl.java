@@ -28,7 +28,7 @@ public class ExchangeRatesServiceImpl implements ExchangeRatesService {
         String key = allValues.get("secret_key");
         String currency = allValues.get("base_currency");
 
-        if("admin".equals(userRepository.isItAdmin(key))){
+        if(userRepository.isItAdmin(key).equals("admin")){
             double rub = 0, btc = 0, ton = 0;
 
             switch (currency) {

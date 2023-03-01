@@ -6,7 +6,6 @@ import ru.khokhlov.entity.Currency;
 import ru.khokhlov.entity.ExchangeRates;
 import ru.khokhlov.entity.Wallet;
 import ru.khokhlov.repository.ExchangeRatesRepository;
-import ru.khokhlov.repository.TransactionRepository;
 import ru.khokhlov.repository.UserRepository;
 import ru.khokhlov.repository.WalletRepository;
 import ru.khokhlov.service.TransactionService;

@@ -18,7 +18,7 @@ public class WalletController {
         this.walletService = walletService;
     }
 
-    @ResponseStatus(HttpStatus.CREATED)
+    @ResponseStatus(HttpStatus.OK)
     @PostMapping("")
     public void addWallet(@RequestBody Wallet wallet){
         walletService.createWallet(wallet);
