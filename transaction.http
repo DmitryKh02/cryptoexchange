@@ -1,2 +1,2 @@
-###Получение количества транзакций
-GET http://localhost:8080/exchange/transaction/get-count?secret_key=vcT6@Nwr7eQu<d@?50GHLEIAu&date-from=23.02.2023&date-to=28.02.2023
+###Получение количества транзакций(admin)
+GET http://localhost:8080/exchange/transaction/get-count?secret_key=vcT6@Nwr7eQu<d@?50GHLEIAu&date-from=28.02.2023&date-to=01.03.2023

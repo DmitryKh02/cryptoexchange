@@ -1,14 +1,14 @@
 ###Запрос данных кошелька
-GET http://localhost:8080/exchange/wallet/balance?key=YHs`g:vJZX0mQonw]4dBt[Zlr
-
-###Запрос баланса всех кошельков по определенной валюте (админ)
-GET http://localhost:8080/exchange/wallet/currency-balance?secret_key=vcT6@Nwr7eQu<d@?50GHLEIAu&currency=BTC
+GET http://localhost:8080/exchange/wallet/balance?key=vyRehEhAgoJ7Ldvp29U[R^3:^
 
 ###Добавление валюты в кошелек
-POST http://localhost:8080/exchange/wallet/add?secret_key=YHs`g:vJZX0mQonw]4dBt[Zlr&RUB=1000&TON=7&BTC=0.1
+POST http://localhost:8080/exchange/wallet/add?secret_key=vyRehEhAgoJ7Ldvp29U[R^3:^&RUB=1000&TON=70&BTC=12
 
 ###Вывод средств
-POST http://localhost:8080/exchange/wallet/withdrawal-of-funds?secret_key=YHs`g:vJZX0mQonw]4dBt[Zlr&currency=TON&count=7832&credit_card=1234 5678 9012 3456
+POST http://localhost:8080/exchange/wallet/withdrawal-of-funds?secret_key=vyRehEhAgoJ7Ldvp29U[R^3:^&currency=TON&count=54&credit_card=1234 5678 9012 3456
 
 ###Обмен валют
-POST http://localhost:8080/exchange/wallet/transaction?secret_key=YHs`g:vJZX0mQonw]4dBt[Zlr&currency_from=BTC&currency_to=TON&amount=12
+POST http://localhost:8080/exchange/wallet/transaction?secret_key=vyRehEhAgoJ7Ldvp29U[R^3:^&currency_from=BTC&currency_to=TON&amount=7
+
+###Запрос баланса всех кошельков по определенной валюте (админ)
+GET http://localhost:8080/exchange/wallet/currency-balance?secret_key=H^`EoTYNrKNB@4C;gf6KnKc4n&currency=BTC

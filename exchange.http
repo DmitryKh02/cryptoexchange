@@ -1,0 +1,5 @@
+### Курс валют
+GET http://localhost:8080/exchange/rates/get?secret_key=YHs`g:vJZX0mQonw]4dBt[Zlr&currency=TON
+
+### Изменение курса валют (админ)
+POST http://localhost:8080/exchange/rates/change?secret_key=vcT6@Nwr7eQu<d@?50GHLEIAu&base_currency=BTC&TON=9999&RUB=2785343
